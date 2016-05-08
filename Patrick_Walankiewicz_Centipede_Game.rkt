@@ -35,7 +35,7 @@
 ;A world is one of:
 ;(make-world centipede player bullet)
 ;Interpretation: A world stores the conditions of                    
-;the centipede, player and bullet.
+;the centipede, player, bullet and mushroom.
 (define-struct world [centipede player bullet mushroom])
 
 ;A LOS is one of:
@@ -44,7 +44,7 @@
 
 ;A centipede is a (make-centipede (cons (make-seg String Make-Posn) LOS)
 ;Interpretation: A centipede is a list of segments, and keeps track
-;of their directions a positions
+;of their directions and positions
 (define-struct centipede [seg])
 
 ;A seg is a (make-seg String Make-Posn String)
@@ -62,8 +62,8 @@
 ;A bullet is one of:
 ;(make-bullet (cons Number (cons Number empty)))
 ;(make-bullet empty)
-;Interpretation: A bullet stores a number inicating its speed
-;list of two numbers, the first
+;Interpretation: A bullet stores a number indicating its speed
+;with a list of two numbers, the first
 ;number is the x position of the bullet and the second number is
 ;the y position of the bullet. If no bullet exists then a bullet
 ;contains an empty list
