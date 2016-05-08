@@ -35,9 +35,7 @@
 ;A world is one of:
 ;(make-world centipede player bullet)
 ;Interpretation: A world stores the conditions of                    
-;the centipede, player and bullet. A world could also be
-;an integer that represents the length of the initial
-;centipede
+;the centipede, player and bullet.
 (define-struct world [centipede player bullet mushroom])
 
 ;A LOS is one of:
